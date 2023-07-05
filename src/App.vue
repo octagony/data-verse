@@ -1,47 +1,42 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { faker } from '@faker-js/faker'
+import { reactive } from 'vue'
+
+const data = reactive({
+  fullName: faker.person.fullName({
+    firstName: faker.person.firstName(),
+    lastName: faker.person.lastName()
+  }),
+  state: faker.location.state(),
+  city: faker.location.city(),
+  streetAdress: faker.location.streetAddress(),
+  zip: faker.location.zipCode(),
+  cardNumber: faker.finance.creditCardNumber(),
+  cvvNumber: faker.finance.creditCardCVV()
+})
+
+const regenerateData = () => {
+  data.fullName = faker.person.fullName({
+    firstName: faker.person.firstName(),
+    lastName: faker.person.lastName()
+  })
+  data.state = faker.location.state()
+  data.city = faker.location.city()
+  ;(data.streetAdress = faker.location.streetAddress()), (data.zip = faker.location.zipCode())
+  ;(data.cardNumber = faker.finance.creditCardNumber()),
+    (data.cvvNumber = faker.finance.creditCardCVV())
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="test">
+    <p>{{ data.fullName }}</p>
+    <p>{{ data.state }}</p>
+    <p>{{ data.city }}</p>
+    <p>{{ data.streetAdress }}</p>
+    <p>{{ data.zip }}</p>
+    <p>{{ data.cardNumber }}</p>
+    <p>{{ data.cvvNumber }}</p>
+  </div>
+  <button @click="regenerateData">regenerateData</button>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
