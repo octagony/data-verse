@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "DataVerse",
+  "description": "Extension for generating random data",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "48": "/public/icon-48x48.png",
+      "64": "/public/icon-64x64.png",
+      "128": "/public/icon-128x128.png"
+    }
+  }
+}
