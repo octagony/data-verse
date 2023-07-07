@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { User } from '@/utils/user.dto'
 import MainData from '@/components/MainData.vue'
+import GenerateButton from '@/components/GenerateButton.vue'
+import { User } from '@/utils/user.dto'
 import { ref } from 'vue'
-import IUserClass from '@/interfaces/user.interface'
 
-const userData = ref<IUserClass>(new User())
+const userData = new User()
+const userRef = ref(userData)
 </script>
 
 <template>
-  <MainData :userData="userData" />
+  <MainData :userRef="userRef" />
+  <GenerateButton />
 </template>
