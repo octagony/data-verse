@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { type IUserClass } from '@/interfaces/user.interface'
+import type { PropType } from 'vue'
 const props = defineProps({
-  userData: String
+  userRef: Object as PropType<IUserClass>
 })
 </script>
 

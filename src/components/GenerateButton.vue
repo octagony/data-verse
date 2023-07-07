@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps({
+  regenerate: Function
+})
+const emit = defineEmits(['updateData'])
+</script>
+
 <template>
-  <button>Regenerate</button>
+  <button @click="$emit('updateData')">Regenerate</button>
 </template>

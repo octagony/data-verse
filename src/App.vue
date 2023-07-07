@@ -6,9 +6,13 @@ import { ref } from 'vue'
 
 const userData = new User()
 const userRef = ref(userData)
+
+const updateData = () => {
+  userRef.value.update()
+}
 </script>
 
 <template>
   <MainData :userRef="userRef" />
-  <GenerateButton />
+  <GenerateButton @updateData="updateData" />
 </template>
