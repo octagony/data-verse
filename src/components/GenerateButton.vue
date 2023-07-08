@@ -21,10 +21,16 @@ button {
   font-size: 1rem;
   line-height: 1.15;
   transition: all 0.2s, box-shadow 0.08s ease-in;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   padding: 10px;
   font-weight: 700;
+}
+
+button:hover {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0,
+    rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(50, 151, 211, 0.3) 0 0 0 4px;
+  scale: 1.1;
 }
 
 button:focus {

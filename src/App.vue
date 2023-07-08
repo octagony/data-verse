@@ -24,5 +24,6 @@ const updateData = () => {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 5px 10px;
 }
 </style>
