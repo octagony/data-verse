@@ -10,6 +10,6 @@ export interface IUser {
   cvvNumber: string
 }
 
-export interface IUserClass extends IUser {
+export type IUserClass = IUser & {
   update: () => void
 }
