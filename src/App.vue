@@ -13,6 +13,16 @@ const updateData = () => {
 </script>
 
 <template>
-  <MainData :userRef="userRef" />
-  <GenerateButton @updateData="updateData" />
+  <div class="container">
+    <MainData :userRef="userRef" />
+    <GenerateButton @updateData="updateData" />
+  </div>
 </template>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+</style>
