@@ -57,6 +57,8 @@ const props = defineProps({
 .data__container:hover {
   scale: 1.05;
   padding: 2.5px;
+  margin-left: 25px;
+  width: 60%;
 }
 
 .data__description {
