@@ -13,3 +13,9 @@ export interface IUser {
 export type IUserClass = IUser & {
   update: () => void
 }
+
+export interface IUserProps {
+  id: number
+  description: string
+  value: string
+}

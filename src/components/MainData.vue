@@ -1,16 +1,19 @@
 <script setup lang="ts">
-import { type IUserClass } from '@/interfaces/user.interface'
+import { type IUserProps } from '@/interfaces/user.interface'
 import type { PropType } from 'vue'
 const props = defineProps({
-  userRef: Object as PropType<IUserClass>
+  userRef: Object as PropType<IUserProps[]>
 })
 </script>
 
 <template>
   <div class="container">
-    <div class="data__container">
-      <small class="data__description">First Name</small>
-      <p class="data__value">{{ props.userRef?.firstName }}</p>
+    <div class="data__container" v-for="data in props.userRef" :key="data?.id">
+      <small class="data__description">{{ data?.description }}</small>
+      <p class="data__value">{{ data?.value }}</p>
+    </div>
+    <!-- <div class="data__container">
+      
     </div>
     <div class="data__container">
       <small class="data__description">Last Name</small>
@@ -43,7 +46,7 @@ const props = defineProps({
     <div class="data__container">
       <small class="data__description">CvvNumber</small>
       <p class="data__value">{{ props.userRef?.cvvNumber }}</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
