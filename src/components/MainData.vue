@@ -54,13 +54,13 @@ const props = defineProps({
 }
 
 .data__description {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #0dc3e7;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .data__value {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 </style>
