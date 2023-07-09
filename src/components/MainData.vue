@@ -51,6 +51,12 @@ const props = defineProps({
 .data__container {
   padding: 0 5px;
   width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.data__container:hover {
+  scale: 1.05;
+  padding: 2.5px;
 }
 
 .data__description {

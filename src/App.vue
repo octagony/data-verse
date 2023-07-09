@@ -57,6 +57,7 @@ const updateData = () => {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 5px;
+  padding: 10px 20px;
+  position: relative;
 }
 </style>
