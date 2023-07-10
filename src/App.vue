@@ -2,67 +2,22 @@
 import MainData from '@/components/MainData.vue'
 import GenerateButton from '@/components/GenerateButton.vue'
 import { User } from '@/utils/user.class'
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { type IUserProps } from './interfaces/user.interface'
 
 const userData = new User()
-const userRef = ref<IUserProps[]>([
-  {
-    id: 1,
-    description: 'First Name',
-    value: userData.firstName
-  },
-  {
-    id: 2,
-    description: 'Last Name',
-    value: userData.lastName
-  },
-  {
-    id: 3,
-    description: 'Email',
-    value: userData.email
-  },
-  {
-    id: 4,
-    description: 'State',
-    value: userData.state
-  },
-  {
-    id: 5,
-    description: 'City',
-    value: userData.city
-  },
-  {
-    id: 6,
-    description: 'StreetAdress',
-    value: userData.streetAdress
-  },
-  {
-    id: 7,
-    description: 'Zip',
-    value: userData.zip
-  },
-  {
-    id: 8,
-    description: 'Card number',
-    value: userData.cardNumber
-  },
-  {
-    id: 9,
-    description: 'CVV',
-    value: userData.cvvNumber
-  }
-])
+const userRef = ref<IUserProps[]>(userData.returnData())
 
-// const updateData = () => {
-//   userRef.value.update()
-// }
+const updateData = () => {
+  userData.update()
+  userRef.value = userData.returnData()
+}
 </script>
 
 <template>
   <div class="container">
     <MainData :userRef="userRef" />
-    <!-- <GenerateButton @updateData="updateData" /> -->
+    <GenerateButton @updateData="updateData" />
   </div>
 </template>
 
