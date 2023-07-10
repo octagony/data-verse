@@ -14,5 +14,6 @@ body {
   background-color: #15172b;
   color: #eee;
   min-width: 450px;
+  min-height: 600px;
   font-weight: 400;
 }

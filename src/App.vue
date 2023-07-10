@@ -2,7 +2,7 @@
 import MainData from '@/components/MainData.vue'
 import GenerateButton from '@/components/GenerateButton.vue'
 import { UpdateUser } from '@/utils/user.class'
-import { computed, ref, watch } from 'vue'
+import { ref } from 'vue'
 import { type IUserProps } from './interfaces/user.interface'
 
 const userData = new UpdateUser()
