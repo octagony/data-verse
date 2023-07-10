@@ -10,12 +10,8 @@ export interface IUser {
   cvvNumber: string
 }
 
-export type IUserClass = IUser & {
-  update: () => void
-}
-
 export interface IUserProps {
   id: number
   description: string
-  value: string
+  value: string | Function
 }

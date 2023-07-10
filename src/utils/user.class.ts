@@ -1,7 +1,7 @@
-import type { IUserClass, IUserProps } from '@/interfaces/user.interface'
+import type { IUser, IUserProps } from '@/interfaces/user.interface'
 import { faker } from '@faker-js/faker'
 
-export class User implements IUserClass {
+abstract class User implements IUser {
   firstName: string
   lastName: string
   email: string
@@ -24,6 +24,12 @@ export class User implements IUserClass {
     this.zip = faker.location.zipCode()
     this.cardNumber = faker.finance.creditCardNumber()
     this.cvvNumber = faker.finance.creditCardCVV()
+  }
+}
+
+export class UpdateUser extends User {
+  constructor() {
+    super()
   }
   update() {
     this.firstName = faker.person.firstName()

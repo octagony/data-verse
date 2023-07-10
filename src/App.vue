@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import MainData from '@/components/MainData.vue'
 import GenerateButton from '@/components/GenerateButton.vue'
-import { User } from '@/utils/user.class'
+import { UpdateUser } from '@/utils/user.class'
 import { computed, ref, watch } from 'vue'
 import { type IUserProps } from './interfaces/user.interface'
 
-const userData = new User()
+const userData = new UpdateUser()
 const userRef = ref<IUserProps[]>(userData.returnData())
 
 const updateData = () => {
