@@ -10,5 +10,14 @@
       "64": "icon-64x64.png",
       "128": "icon-128x128.png"
     }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "github.com@data-verse",
+      "strict_min_version": "42.0"
+    },
+    "safari": {
+      "strict_min_version": "14"
+    }
   }
 }
