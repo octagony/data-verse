@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DataVerse",
   "description": "Extension for generating random data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "action": {
     "default_popup": "index.html",
     "default_icon": {
