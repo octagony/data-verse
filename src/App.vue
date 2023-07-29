@@ -3,7 +3,7 @@ import MainData from '@/components/MainData.vue'
 import GenerateButton from '@/components/GenerateButton.vue'
 import { UpdateUser } from '@/utils/user.class'
 import { ref } from 'vue'
-import { type IUserProps } from './interfaces/user.interface'
+import type { IUserProps } from './interfaces/user.interface'
 
 const userData = new UpdateUser()
 const userRef = ref<IUserProps[]>(userData.returnData())
